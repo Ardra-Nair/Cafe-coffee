@@ -1,10 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Source+Sans+Pro:ital,wght@0,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 html{
     scroll-behavior: smooth;
 }
+
+/* custom scrollbar */
+::-webkit-scrollbar{
+    width: 12px;
+
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(transparent,#e6a009);
+    border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(transparent,rgb(60, 7, 7));
+
+}
+
+/* end of scrollbar */
+
+/* Navbar */
 img{
     width: 20%;
 }
@@ -22,6 +41,8 @@ img{
     color: saddlebrown!important;
 }
 
+/* end of navbar */
+
 /* slider */
 @media only screen and (min-width:576px) and (max-width:767) {
     .carousel-item{
@@ -29,6 +50,11 @@ img{
         width: 100vh;
     }
     
+}
+.carousel{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
 .carousel-item{
     height: 100vh;
@@ -54,7 +80,7 @@ img{
     
 }
 .carousel-caption p{
-    font-size: 80px;
+    font-size: 70px;
     font-weight: 30px;
     text-align: right!important;
     padding-left: 50px;
@@ -66,7 +92,7 @@ img{
 d flex{
     display: flex!important;
 }
-.site-btn::after{
+/* .site-btn::after{
     box-sizing: border-box;
 }
 .site-btn{
@@ -90,7 +116,29 @@ d flex{
     border-color: #010103;
     border-radius: 7px;
   }
-  
+   */
+  .main-btn{
+    display: inline-block;
+    border-radius: 50px;
+    padding: 15px 10px;
+    border: 1px solid white;
+    color: black;
+    font-weight: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: linear-gradient(to right, #fff 100%,transparent 100%);
+    text-decoration: none;
+    background-size: 50% 50%;
+    background-position: right bottom;
+    transition: all 0.5s ease-out;
+    float: right;
+    
+
+  }
+
+  .main-btn:hover{
+    color: #b70a0a;
+  }
 /* end of slider */
 /* About */
 
@@ -111,9 +159,11 @@ d flex{
 h3{
     padding-top: 15px;
 }
+
 /* end of about */
 
 /* menu */
+ 
 .sub-title{
     color: #010103;
     font-family:'Source Sans Pro', sans-serif;
@@ -122,4 +172,194 @@ h3{
     padding-top: 10px;
     
 }
+.card{
+    box-shadow: 0 0 20px 2px;
+    transition: 1s;
+}
+.card-title{
+    font-family: 'Fuzzy Bubbles', cursive;
+    border-radius: 5px;
+}
+.card:hover{
+    transform: scale(1.3);
+    z-index: 2;
+
+}
 /* end of menu */
+
+
+/* footer section */
+
+.fullspan{
+    background-color: rgb(55, 3, 3);
+    bottom: 0;
+    
+    font-size: 13px;
+    line-height: 20px;
+    padding-top: 10px;
+    
+}
+
+
+footer{
+    padding: 0 0 0 0;
+    padding-top: 20px;
+    
+}
+footer h4{
+    font-size: 18px;
+    font-weight: bold;
+    color: #da9f5b;
+    margin: 0 0 30px 0;
+    padding: 0;
+    clear: both;
+    text-transform: uppercase;
+}
+footer p{
+    padding: 0;
+    margin: 0;
+}
+footer.copy a{
+     background: none;
+     color: #fff; 
+     padding: 0; 
+     font-weight: bold; 
+     font-size: 13px;
+      margin: 0;
+}
+footer .copy{
+    background: #da9f5b;
+    color: #fff;
+    font-size: 13px;
+    padding: 15px 0;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+#contact .col-md-4 {margin-bottom:40px; }
+
+.visit p{
+    margin-bottom: 20px;
+}
+.visit p strong{
+    font-size: 14px;
+    color: white;
+}
+/* a .pdf{
+    background: white;
+    padding: 3px 35px 3px 15px;
+    
+} */
+footer .row{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+footer .working strong{
+    width: 150px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+.working p strong{
+    font-size: 14px;
+    color: white;
+    
+}
+.working p{
+    font-size: 14px;
+    color: white;
+}
+
+.fab{
+    display: inline-block;
+    font-size: inherit;
+    text-rendering: auto;
+    
+}
+i .fab{
+    border-radius: 50%;
+    transition: ease-in-out;
+    height: 37px;
+    padding: 10px;
+    vertical-align: middle;
+    width: 37px;
+}
+.social-mid a .fab {
+    color: white;
+}
+.social-mid a .fa-pinterest{
+    background-color: #d13a3a;
+}
+.social-mid a .fa-linkedin{
+    background-color: #0072b2;
+}
+.social-mid a .fa-twitter{
+    background-color: #3abbd1;
+}
+.social-mid a .fa-facebook{
+    background-color: #2f5a9a;
+}
+a:-webkit-any-link{
+    cursor: pointer;
+}
+.contact h4:first-child{
+    margin: 0 0 35px 0;
+}
+.social-mid{
+    font-size: 30px;
+    line-height: 60px;
+    
+}
+.social-mid .pdf{
+    width: 50px;
+    height: 50px;
+    color: greenyellow;
+    box-shadow: 0 0 20px 10px rgba(0,0,0,0.05);
+    margin: 0 10px;
+    border-radius: 50%;
+}
+
+.social-mid a:hover .fab{
+    color: #fff;
+
+}
+.social-mid a:hover{
+    transform: translateY(-10px);
+}
+.contact input[type=text]{width:100%;border:0;background:whitesmoke;padding:10px 20px; font-size:14px; text-transform:uppercase;color:#000;margin:0 0 10px 0}
+.contact textarea{width:100%;border:0 none;padding:10px 20px; font-size:14px; text-transform:uppercase; color:#000;margin:0 0 9px 0}
+.contact input[type=submit]{transition:background .1s ease-in-out;-moz-transition:background .1s ease-in-out;-webkit-transition:background .1s ease-in-out;padding:10px 20px;background:#da9f5b;font-size:14px;font-weight:bold;color:#fff;margin:0;border:0}
+.contact input[type=submit]:hover{transition:background .1s ease-in-out;-moz-transition:background .1s ease-in-out;-webkit-transition:background .1s ease-in-out;  background:#fff;color:#da9f5b}
+.contactform input.error,.contactform textarea.error,.newsletter input.error{background:#da9f5b;color:#fff}
+
+
+
+
+/* end of footer */
+
+/* FIND US */
+
+.content{
+    text-align: center;
+    padding-top: 100px;
+    font-size: 45px;
+    padding-right: 15px;
+    font-family: 'Pacifico', cursive;
+    color: brown;
+}
+.left-section{
+    justify-content: center;
+}
+.info{
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    color: black;
+
+}
+iframe{
+    padding-top: 18px;
+    width: 100%;
+    height: 500px;
+    filter: invert(100%);
+}
+/* END OF FIND US */
